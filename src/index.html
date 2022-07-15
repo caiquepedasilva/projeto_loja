@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="name">nome</h1>
+
     asdfsdfsd
 </body>
 <script>
     function pegar_produto(){
-        fetch('').then().then(
-            
-        )
+        fetch('https://fakestoreapi.com/products/1')
+        .then((resp) => resp.json())
+        .then(function(data){
+            document.getElementById('name').val = 
+        })
     }
+    pegar_produto()
 </script>
 </html>
