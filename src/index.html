@@ -16,7 +16,8 @@
         fetch('https://fakestoreapi.com/products/1')
         .then((resp) => resp.json())
         .then(function(data){
-            document.getElementById('name').val = 
+            data = {"title": "Caique"}
+            document.getElementById('name').val = data ['title']
         })
     }
     pegar_produto()
