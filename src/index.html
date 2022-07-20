@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1 id="name">nome</h1>
+    <h1>Nome</h1>
+    <p id="name"></p>
 
     asdfsdfsd
 </body>
 <script>
-    function pegar_produto(){
+    function pegar_produto() {
+
         fetch('https://fakestoreapi.com/products/1')
-        .then((resp) => resp.json())
-        .then(function(data){
-            data = {"title": "Caique"}
-            document.getElementById('name').val = data ['title']
-        })
+            .then((resp) => resp.json())
+            .then(function (data) {
+                //data = {"title": "Caique"}
+                document.getElementById("name").innerHTML = data['title']
+            })
     }
     pegar_produto()
 </script>
+
 </html>
