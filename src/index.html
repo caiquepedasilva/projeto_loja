@@ -13,7 +13,8 @@
     <p id="imagem"></p>
     <p id="name"></p>
     <p id="preco"></p>
-    <p id="descricao"></p>
+    <p id="descricao"></p> 
+    <img id="imagem"></img>
 </body>
 <script>
     function pegar_produto() {
@@ -25,7 +26,7 @@
                 document.getElementById("name").innerHTML = data['title']
                 document.getElementById("preco").innerHTML = data['price']
                 document.getElementById("descricao").innerHTML = data['description']
-                document.getElementById("imagem").innerHTML = data['image']
+                document.getElementById("imagem").src = data['image']
             })
     }
     pegar_produto()
