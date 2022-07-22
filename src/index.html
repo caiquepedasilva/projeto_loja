@@ -8,98 +8,70 @@
     <title>Loja</title>
     <style>
         body {
-            background-color: lightblue;
+            background-color: #353d47;
+
+        }
+
+        .card {
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            max-width: 300px;
+            max-height: 250px;
+            align-items: center;
+            width: 400px;
+            height: 900px;
+            border: solid 5px rgb(119, 47, 47);
+        }
+
+        .minhatag {
+            font-size: 100%;
             font-family: 'Times New Roman', Times, serif;
-            color: rgb(22, 36, 48);
+            color: rgb(215, 233, 248);
+        }
+        p#descricao.minhatag{
+         font-size: 12px;
         }
 
-        #imagem {
-            grid-area: header;
+        .botao {
+            background-color: rgb(46, 155, 46);
+            border-radius: 12px 12px 12px 12px;
+            padding: 10px 50px;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            color: rgb(215, 233, 248);
+            width: 250px;
+            margin-left: 25px;
+            margin-right: auto;
         }
-
-        #name {
-            grid-area: menu;
-        }
-
-        #preco {
-            grid-area: main;
-        }
-
-        #descricao {
-            grid-area: right;
-        }
-
-        #categoria {
-            grid-area: footer;
-        }
-
-        #corpo{
-            display: grid;
-            grid-template-areas:
-                'header'
-                'menu' 
-                'main' 
-                'right'
-                'footer';
-            grid-gap: 10px;
-            background-color: #2196F3;
-            padding: 10px;
-        }
-
-        @media screen and (min-width: 400px) {
-            body {
-                font-size: 1.5rem;
-            }
-
-            img {
-                max-width: 250px;
-                max-height: 200px;
-            }
-        }
-
-        @media screen and (min-width: 800px) {
-            body {
-                background-color: lavender;
-                font-size: 2rem;
-            }
-            #corpo{
-            display: grid;
-            grid-template-areas:
-                'header menu'
-                'header main' 
-                'header right'
-                'header footer';
-            grid-gap: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-            img {
-                max-width: 350px;
-                max-height: 300px;
-            }
-        }
-
-
-        .
     </style>
 </head>
 
 <body id="corpo">
-    <img id="imagem">
-    <h1 id="name"></h1>
-    <p id="preco"></p>
-    <p id="descricao"></p>
-    <p id="categoria"></p>
+
+    <div class="principal">
+        <div class="card">
+            <img id="imagem" height="250" width="300" class="imagem">
+            <h1 id="name" class="minhatag"></h1>
+            <strong>
+                <p id="preco" class="minhatag"></p>
+            </strong>
+            <p id="descricao" class="minhatag"></p>
+            <p id="categoria" class="minhatag"></p>
+            <input type="button" value="Comprar" class="botao">
+        </div>
+    </div>
 </body>
 <script>
     function pegar_produto() {
-
+        var str1 = 'R$';
         fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 20))
             .then((resp) => resp.json())
             .then(function (data) {
                 document.getElementById("name").innerHTML = data['title'];
-                document.getElementById("preco").innerHTML = data['price'];
+                document.getElementById("preco").innerHTML = `${str1} ` + data['price'];
                 document.getElementById("descricao").innerHTML = data['description'];
                 document.getElementById("categoria").innerHTML = data['category'];
                 document.getElementById("imagem").src = data['image'];
