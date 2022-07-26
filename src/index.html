@@ -5,69 +5,195 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
+    <title>Loja1</title>
     <style>
-        body {
-            background-color: #353d47;
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .containercard1 {
+            display:inline-block;
+            width: 150px;
+            min-width:33vw;
+            justify-content: center;
+            margin-left: 75px;
+        }
+
+        .containercard2 {
+            display:inline-block;
+            width: 150px;
+            min-width:33vw;         
+            justify-content: center;
+            margin-left: 50px;
+        }
+
+        .containercard3 {
+            display: inline-block;
+            width: 150px;
+            min-width:25vw;
+            justify-content: center;
+            margin-right: -55px;
 
         }
 
         .card {
-            width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            max-width: 300px;
-            max-height: 250px;
-            align-items: center;
-            width: 400px;
-            height: 900px;
-            border: solid 5px rgb(119, 47, 47);
+            width: 300px;
+            max-height: max-content;
+            border-radius: 15px;
+            margin-top: 50px;
+            background-color: #c9b714;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
 
-        .minhatag {
-            font-size: 100%;
-            font-family: 'Times New Roman', Times, serif;
-            color: rgb(215, 233, 248);
-        }
-        p#descricao.minhatag{
-         font-size: 12px;
+        .card1 {
+            width: 150px;
+            max-height: max-content;
+            border-radius: 15px;
+            margin-top: 50px;
+            background-color: #c9b714;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         }
 
-        .botao {
-            background-color: rgb(46, 155, 46);
-            border-radius: 12px 12px 12px 12px;
-            padding: 10px 50px;
-            align-items: center;
-            text-decoration: none;
+        .imagem {
+            display: flex;
+            justify-content: center;
+        }
+
+        .text-main {
+            text-align: center;
+            color: rgb(34, 28, 28);
+            font-weight: 600;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .text-maincard {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .desc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(34, 28, 28);
+            font-weight: 300;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            border: none;
+            transform: 1s;
+            background-color: #945c4dd8;
+            color: rgb(34, 28, 28);
             cursor: pointer;
-            color: rgb(215, 233, 248);
-            width: 250px;
-            margin-left: 25px;
-            margin-right: auto;
+        }
+
+        .btn:hover {
+            transition: 1s;
+            background-color: #945c4dd8;
+            color: #fff;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 
 <body id="corpo">
 
-    <div class="principal">
+    <div class="container">
         <div class="card">
-            <img id="imagem" height="250" width="300" class="imagem">
-            <h1 id="name" class="minhatag"></h1>
-            <strong>
-                <p id="preco" class="minhatag"></p>
-            </strong>
-            <p id="descricao" class="minhatag"></p>
-            <p id="categoria" class="minhatag"></p>
-            <input type="button" value="Comprar" class="botao">
+            <div class="imagem">
+                <img id="imagem" height="250" width="300" class="imagem">
+            </div>
+            <div class="texto">
+                <h1 id="name" class="text-main"></h1>
+                <strong>
+                    <p id="preco" class="desc"></p>
+                </strong>
+                <p id="descricao" class="desc"></p>
+                <p id="categoria" class="desc"></p>
+            </div>
+            <div class="button">
+                <input type="button" value="Comprar" class="btn">
+            </div>
         </div>
     </div>
+
+    <!-- Card 01 pequeno-->
+            <div class="containercard1">
+            <div class="card1">
+                <div class="imagem">
+                    <img id="imagemcard1" height="100" width="150" class="imagem">
+                </div>
+                <div class="texto">
+                    <h1 id="namecard1" class="text-maincard"></h1>
+                    <strong>
+                        <p id="precocard1" class="desc"></p>
+                    </strong>
+                    <p id="categoriacard1" class="desc"></p>
+                </div>
+                <div class="button">
+                    <input type="button" value="Comprar" class="btn">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 02 pequeno-->
+
+            <div class="containercard2">
+                <div class="card1">
+                    <div class="imagem">
+                        <img id="imagemcard2" height="100" width="150" class="imagem">
+                    </div>
+                    <div class="texto">
+                        <h1 id="namecard2" class="text-maincard"></h1>
+                        <strong>
+                            <p id="precocard2" class="desc"></p>
+                        </strong>
+                        <p id="categoriacard2" class="desc"></p>
+                    </div>
+                    <div class="button">
+                        <input type="button" value="Comprar" class="btn">
+                    </div>
+                </div>
+            </div>
+
+           <!-- Card 03 pequeno-->
+
+                <div class="containercard3">
+                    <div class="card1">
+                        <div class="imagem">
+                            <img id="imagemcard3" height="100" width="150" class="imagem">
+                        </div>
+                        <div class="texto">
+                            <h1 id="namecard3" class="text-maincard"></h1>
+                            <strong>
+                                <p id="precocard3" class="desc"></p>
+                            </strong>
+                            <p id="categoriacard3" class="desc"></p>
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Comprar" class="btn">
+                        </div>
+                    </div>
+                </div>
 </body>
 <script>
     function pegar_produto() {
         var str1 = 'R$';
-        fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 20))
+        fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 19))
             .then((resp) => resp.json())
             .then(function (data) {
                 document.getElementById("name").innerHTML = data['title'];
@@ -78,6 +204,48 @@
             })
     }
     pegar_produto()
+
+    //card01
+    function pegar_produto1() {
+        var str1 = 'R$';
+        fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 19))
+            .then((resp) => resp.json())
+            .then(function (data) {
+                document.getElementById("namecard1").innerHTML = data['title'];
+                document.getElementById("precocard1").innerHTML = `${str1} ` + data['price'];
+                document.getElementById("categoriacard1").innerHTML = data['category'];
+                document.getElementById("imagemcard1").src = data['image'];
+            })
+    }
+    pegar_produto1()
+
+    //card2
+    function pegar_produto2() {
+        var str1 = 'R$';
+        fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 19))
+            .then((resp) => resp.json())
+            .then(function (data) {
+                document.getElementById("namecard2").innerHTML = data['title'];
+                document.getElementById("precocard2").innerHTML = `${str1} ` + data['price'];
+                document.getElementById("categoriacard2").innerHTML = data['category'];
+                document.getElementById("imagemcard2").src = data['image'];
+            })
+    }
+    pegar_produto2()
+
+    //card3
+    function pegar_produto3() {
+        var str1 = 'R$';
+        fetch('https://fakestoreapi.com/products/' + Math.floor(Math.random() * 19))
+            .then((resp) => resp.json())
+            .then(function (data) {
+                document.getElementById("namecard3").innerHTML = data['title'];
+                document.getElementById("precocard3").innerHTML = `${str1} ` + data['price'];
+                document.getElementById("categoriacard3").innerHTML = data['category'];
+                document.getElementById("imagemcard3").src = data['image'];
+            })
+    }
+    pegar_produto3()
 </script>
 
 </html>
